@@ -12,9 +12,8 @@ As the submarine drops below the surface of the ocean, it automatically performs
 
 For example, suppose you had the following report:
 
-|Report|
-|-|
 |199|
+|---|
 |200|
 |208|
 |210|
@@ -25,7 +24,7 @@ For example, suppose you had the following report:
 |260|
 |263|
 
-This report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and so on.
+This report indicates that, scanning outward from the submarine, the sonar sweep found depths of ```199```, ```200```, ```208```, ```210```, and so on.
 
 The first order of business is to figure out how quickly the depth increases, just so you know what you're dealing with - you never know if the keys will get carried into deeper water by an ocean current or a fish or something.
 
@@ -44,11 +43,11 @@ To do this, count **the number of times a depth measurement increases** from the
 |260 (decreased)|
 |263 (increased)|
 
-In this example, there are 7 measurements that are larger than the previous measurement.
+In this example, there are ```7``` measurements that are larger than the previous measurement.
 
-How many measurements are larger than the previous measurement?
+**How many measurements are larger than the previous measurement?**
 
-Your puzzle answer was **1316**.
+Your puzzle answer was ```1316```.
 
 # --- Part Two ---
 
@@ -86,16 +85,11 @@ In the above example, the sum of each three-measurement window is as follows:
 |G: 769 (increased)|
 |H: 792 (increased)|
 
-In this example, there are 5 sums that are larger than the previous sum.
+In this example, there are ```5``` sums that are larger than the previous sum.
 
-Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
+Consider sums of a three-measurement sliding window. **How many sums are larger than the previous sum?**
 
-Your puzzle answer was 1344.
+Your puzzle answer was ```1344```.
 
 Both parts of this puzzle are complete! They provide two gold stars: **
 
-At this point, you should return to your Advent calendar and try another puzzle.
-
-If you still want to see it, you can get your puzzle input.
-
-You can also [Share] this puzzle.
