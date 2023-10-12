@@ -92,13 +92,11 @@ So, the last completion string above - `])}>` - would be scored as follows:
 
 The five lines' completion strings have total scores as follows:
 
-```
-}}]])})] - 288957 total points.
-)}>]}) - 5566 total points.
-}}>}>)))) - 1480781 total points.
-]]}}]}]}> - 995444 total points.
-])}> - 294 total points.
-```
+- `}}]])})]` - `288957` total points.
+- `)}>]})` - `5566` total points.
+- `}}>}>))))` - `1480781` total points.
+- `]]}}]}]}>` - `995444` total points.
+- `])}>` - `294` total points.
 
 Autocomplete tools are an odd bunch: the winner is found by sorting all of the scores and then taking the middle score. (There will always be an odd number of scores to consider.) In this example, the middle score is 288957 because there are the same number of scores smaller and larger than it.
 
