@@ -91,5 +91,4 @@ Consider sums of a three-measurement sliding window. **How many sums are larger 
 
 Your puzzle answer was `1344`.
 
-Both parts of this puzzle are complete! They provide two gold stars: :star: :star:
-
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
