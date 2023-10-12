@@ -33,15 +33,15 @@ To do this, count **the number of times a depth measurement increases** from the
 |Example|
 |-|
 |199 (N/A - no previous measurement)|
-|200 (increased)|
-|208 (increased)|
-|210 (increased)|
+|200 (**increased**)|
+|208 (**increased**)|
+|210 (**increased**)|
 |200 (decreased)|
-|207 (increased)|
-|240 (increased)|
-|269 (increased)|
+|207 (**increased**)|
+|240 (**increased**)|
+|269 (**increased**)|
 |260 (decreased)|
-|263 (increased)|
+|263 (**increased**)|
 
 In this example, there are `7` measurements that are larger than the previous measurement.
 
