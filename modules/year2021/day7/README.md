@@ -16,9 +16,9 @@ For example, consider the following horizontal positions:
 16,1,2,0,4,2,7,1,2,14
 ```
 
-This means there's a crab with horizontal position 16, a crab with horizontal position 1, and so on.
+This means there's a crab with horizontal position `16`, a crab with horizontal position `1`, and so on.
 
-Each change of 1 step in horizontal position of a single crab costs 1 fuel. You could choose any horizontal position to align them all on, but the one that costs the least fuel is horizontal position 2:
+Each change of 1 step in horizontal position of a single crab costs 1 fuel. You could choose any horizontal position to align them all on, but the one that costs the least fuel is horizontal position `2`:
 
 - Move from `16` to `2`: `14` fuel
 - Move from `1` to `2`: `1` fuel
