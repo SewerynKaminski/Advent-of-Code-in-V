@@ -73,4 +73,4 @@ Figure out which board will win last. **Once it wins, what would its final score
 
 Your puzzle answer was `7686`.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: :star: :star:
