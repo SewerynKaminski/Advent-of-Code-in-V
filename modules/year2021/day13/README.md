@@ -130,4 +130,4 @@ Finish folding the transparent paper according to the instructions. The manual s
 
 Your puzzle answer was `FAGURZHE`.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
