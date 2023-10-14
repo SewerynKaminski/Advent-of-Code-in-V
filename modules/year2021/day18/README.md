@@ -143,12 +143,12 @@ For example, the magnitude of [9,1] is 3*9 + 2*1 = 29; the magnitude of [1,9] is
 
 Here are a few more magnitude examples:
 
-- `[[1,2],[[3,4],5]] becomes 143`.
+- `[[1,2],[[3,4],5]]` becomes 143.
 - `[[[[0,7],4],[[7,8],[6,0]]],[8,1]]` becomes 1384.
 - `[[[[1,1],[2,2]],[3,3]],[4,4]]` becomes 445.
 - `[[[[3,0],[5,3]],[4,4]],[5,5]]` becomes 791.
 - `[[[[5,0],[7,4]],[5,5]],[6,6]]` becomes 1137.
-- `[[[[8,7],[7,7]],[[8,6],[7,7]]]`,`[[[0,7],[6,6]],[8,7]]]` becomes 3488.
+- `[[[[8,7],[7,7]],[[8,6],[7,7]]],[[[0,7],[6,6]],[8,7]]]` becomes 3488.
 
 So, given this example homework assignment:
 
