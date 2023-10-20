@@ -37,7 +37,7 @@ fn inc ( mut data [][]u8 ) {
 
 //---------------------------------------------------------------------------//
 fn flash ( mut data [][]u8 ) i32 {
-    mut cnt := 0
+    mut cnt := i32(0)
     mut flash:=true
     for flash {
         flash = false
