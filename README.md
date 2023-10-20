@@ -32,6 +32,6 @@ Advent of Code solutions written i V language
 * [Day 22](modules/year2021/day22) -  :star:
 * [Day 23](modules/year2021/day23) -  :star:
 * [Day 24](modules/year2021/day24) -  :star:
-* [Day 15](modules/year2021/day25) -  :star:
+* [Day 25](modules/year2021/day25) -  :star:
     
 </details>
