@@ -82,7 +82,7 @@ fn(this BingoBoard) score() i32 {
             sum += v
         }
     }
-    return sum * this.last_move
+  return i32(sum * this.last_move)
 }
 
 fn(mut this BingoBoard) reset(){
