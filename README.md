@@ -1,7 +1,7 @@
 # Advent of Code in V
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/SewerynKaminski/Advent-of-Code-in-V/blank.yml)
 
-Advent of Code solutions written i V language
+Advent of Code solutions written in V language
 <details>
     <summary>
         <a href="modules/year2021">2021</a> 
