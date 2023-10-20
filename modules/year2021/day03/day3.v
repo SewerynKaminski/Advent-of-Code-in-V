@@ -44,7 +44,7 @@ pub fn task1() string {
     return ans.str()
 }
 
-fn count_ones ( d [][]u8, i i32 ) u64 {
+fn count_ones ( d [][]u8, i u64 ) u64 {
     mut ret := u64(0);
     for s in d {
         if s.len>0 && s[i] == 49 {
