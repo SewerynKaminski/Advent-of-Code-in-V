@@ -75,4 +75,4 @@ As the submarine starts booting up things like the Retro Encabulator, you realiz
 
 Your puzzle answer was `73181221197111`.
 
-Both parts of this puzzle are complete! They provide two gold stars: :star: :star:
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
