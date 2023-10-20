@@ -3,7 +3,7 @@ module day04
 import os
 
 //---------------------------------------------------------------------------//
-const path = 'modules/year2021/day4/input'
+const path = 'modules/year2021/day04/input'
 
 //---------------------------------------------------------------------------//
 // Play bingo on all boards
