@@ -3,7 +3,7 @@ module day03
 import os
 import strconv
 
-const path = 'modules/year2021/day3/input'
+const path = 'modules/year2021/day03/input'
 
 fn to_i64( s string ) i64 {
 	return strconv.parse_int ( s, 10, 64 ) or {0}
