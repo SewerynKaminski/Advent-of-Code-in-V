@@ -93,7 +93,7 @@ pub fn task2() string {
 
    lp := low_points( data )
 
-   mut areas := []i32{}
+	mut areas := []u64{}
    for v in lp {
 	   areas << area ( mut data, u32(v.x), u32(v.y) )
    }
