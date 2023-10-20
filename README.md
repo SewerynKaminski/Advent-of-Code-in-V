@@ -8,15 +8,15 @@ Advent of Code solutions written i V language
         :star: :star: :star: :star: :star: 
     </summary>
     
-* [Day 1 - Sonar Sweep](modules/year2021/day1) - :star:
-* [Day 2 - Dive!](modules/year2021/day2) -  :star:
-* [Day 3 - Binary Diagnostic](modules/year2021/day3) -  :star:
-* [Day 4 - Giant Squid](modules/year2021/day4) -  :star:
-* [Day 5 - Hydrothermal Venture](modules/year2021/day5) -  :star:
-* [Day 6 - Lanternfish](modules/year2021/day6) -  :star:
-* [Day 7 - The Treachery of Whales](modules/year2021/day7) -  :star:
-* [Day 8 - Seven Segment Search](modules/year2021/day8) -  :star:
-* [Day 9 - Smoke Basin](modules/year2021/day9) -  :star:
+* [Day 1 - Sonar Sweep](modules/year2021/day01) - :star:
+* [Day 2 - Dive!](modules/year2021/day02) -  :star:
+* [Day 3 - Binary Diagnostic](modules/year2021/day03) -  :star:
+* [Day 4 - Giant Squid](modules/year2021/day04) -  :star:
+* [Day 5 - Hydrothermal Venture](modules/year2021/day05) -  :star:
+* [Day 6 - Lanternfish](modules/year2021/day06) -  :star:
+* [Day 7 - The Treachery of Whales](modules/year2021/day07) -  :star:
+* [Day 8 - Seven Segment Search](modules/year2021/day08) -  :star:
+* [Day 9 - Smoke Basin](modules/year2021/day09) -  :star:
 * [Day 10 - Syntax Scoring](modules/year2021/day10) -  :star:
 * [Day 11 - Dumbo Octopus](modules/year2021/day11) -  :star:
 * [Day 12 - Passage Pathing](modules/year2021/day12) -  :star:
