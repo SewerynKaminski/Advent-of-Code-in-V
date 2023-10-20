@@ -37,7 +37,7 @@ fn parse_numbers ( file os.File ) []i32 {
 		len = buf[i_s..].index ( 44 )
 		i_e = i_s + len
 	    }
-	    numbers << buf[i_s..].bytestr().int()
+	    numbers << i32(buf[i_s..].bytestr().int())
     }
     return numbers
 }
