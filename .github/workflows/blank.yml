@@ -37,4 +37,4 @@ jobs:
           cd v
           make
           ./v symlink
-          v .
+          v /home/runner/work/Advent-of-Code-in-V/Advent-of-Code-in-V/
