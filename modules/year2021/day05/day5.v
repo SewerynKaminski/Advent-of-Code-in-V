@@ -36,8 +36,8 @@ fn load ( file os.File ) []Line {
 	t := buf[0..l].bytestr().split ( ' -> ' )
 	s1 := t[0].split ( ',' )
 	s2 := t[1].split ( ',' )
-	p1 := Point { x: s1[0].i32(), y: s1[1].i32() }
-	p2 := Point { x: s2[0].i32(), y: s2[1].i32() }
+	p1 := Point { x: i32(s1[0].int()), y: i32(s1[1].int()) }
+	p2 := Point { x: i32(s2[0].int()), y: i32(s2[1].int()) }
 	ret << Line{p1:p1, p2:p2}
 
 	l = file.read_bytes_into_newline( mut buf ) or {0}-1 
