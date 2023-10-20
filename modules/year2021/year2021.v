@@ -1,15 +1,15 @@
 module year2021
 
 import aoc
-import year2021.day1
-import year2021.day2
-import year2021.day3
-import year2021.day4
-import year2021.day5
-import year2021.day6
-import year2021.day7
-import year2021.day8
-import year2021.day9
+import year2021.day01
+import year2021.day02
+import year2021.day03
+import year2021.day04
+import year2021.day05
+import year2021.day06
+import year2021.day07
+import year2021.day08
+import year2021.day09
 import year2021.day10
 import year2021.day11
 import year2021.day12
@@ -30,15 +30,15 @@ import year2021.day25
 pub const year = 2021
 
 pub const days = aoc.Days{
-		day_1 : aoc.Day { day: 1, task_1 :  day1.task1, task_2 :  day1.task2 }
-		day_2 : aoc.Day { day: 2, task_1 :  day2.task1, task_2 :  day2.task2 }
-		day_3 : aoc.Day { day: 3, task_1 :  day3.task1, task_2 :  day3.task2 }
-		day_4 : aoc.Day { day: 4, task_1 :  day4.task1, task_2 :  day4.task2 }
-		day_5 : aoc.Day { day: 5, task_1 :  day5.task1, task_2 :  day5.task2 }
-		day_6 : aoc.Day { day: 6, task_1 :  day6.task1, task_2 :  day6.task2 }
-		day_7 : aoc.Day { day: 7, task_1 :  day7.task1, task_2 :  day7.task2 }
-		day_8 : aoc.Day { day: 8, task_1 :  day8.task1, task_2 :  day8.task2 }
-		day_9 : aoc.Day { day: 9, task_1 :  day9.task1, task_2 :  day9.task2 }
+		day_1 : aoc.Day { day: 1, task_1 : day01.task1, task_2 : day01.task2 }
+		day_2 : aoc.Day { day: 2, task_1 : day02.task1, task_2 : day02.task2 }
+		day_3 : aoc.Day { day: 3, task_1 : day03.task1, task_2 : day03.task2 }
+		day_4 : aoc.Day { day: 4, task_1 : day04.task1, task_2 : day04.task2 }
+		day_5 : aoc.Day { day: 5, task_1 : day05.task1, task_2 : day05.task2 }
+		day_6 : aoc.Day { day: 6, task_1 : day06.task1, task_2 : day06.task2 }
+		day_7 : aoc.Day { day: 7, task_1 : day07.task1, task_2 : day07.task2 }
+		day_8 : aoc.Day { day: 8, task_1 : day08.task1, task_2 : day08.task2 }
+		day_9 : aoc.Day { day: 9, task_1 : day09.task1, task_2 : day09.task2 }
 		day_10: aoc.Day { day:10, task_1 : day10.task1, task_2 : day10.task2 }
 		day_11: aoc.Day { day:11, task_1 : day11.task1, task_2 : day11.task2 }
 		day_12: aoc.Day { day:12, task_1 : day12.task1, task_2 : day12.task2 }
