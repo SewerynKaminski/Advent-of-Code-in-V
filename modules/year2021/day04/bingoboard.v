@@ -12,7 +12,7 @@ fn(mut this BingoBoard) set_board_from ( s string ) {
    this.board.clear()
    for v in t {
       if v.len > 0 {
-         this.board << v.int()
+	this.board << i32(v.int())
       }
    }
 }
