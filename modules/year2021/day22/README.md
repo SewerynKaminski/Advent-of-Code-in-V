@@ -1,4 +1,5 @@
---- Day 22: Reactor Reboot ---
+# --- Day 22: Reactor Reboot ---
+
 Operating at these extreme ocean depths has overloaded the submarine's reactor; it needs to be rebooted.
 
 The reactor core is made up of a large 3-dimensional grid made up entirely of cubes, one cube per integer 3-dimensional coordinate (`x,y,z`). Each cube can be either on or off; at the start of the reboot process, they are all off. (Could it be an old model of a reactor you've seen before?)
