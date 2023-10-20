@@ -1,4 +1,4 @@
-module day4
+module day04
 
 struct BingoBoard {
   mut:

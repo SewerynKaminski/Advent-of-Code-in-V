@@ -1,4 +1,4 @@
-module day8
+module day08
 
 import os
 

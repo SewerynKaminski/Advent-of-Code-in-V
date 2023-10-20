@@ -1,4 +1,4 @@
-module day7
+module day07
 
 import os
 import math

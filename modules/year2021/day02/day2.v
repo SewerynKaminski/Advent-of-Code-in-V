@@ -1,4 +1,4 @@
-module day2
+module day02
 
 import os
 import strconv

@@ -1,4 +1,4 @@
-module day5
+module day05
 
 import os
 

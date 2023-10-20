@@ -1,4 +1,4 @@
-module day6
+module day06
 
 struct A9{
 	mut:
