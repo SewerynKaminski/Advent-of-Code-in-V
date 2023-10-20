@@ -50,8 +50,8 @@ fn run_day ( days aoc.Days, d i32 ) {
 }
 
 fn main() {
-   mut y:=0
-   mut d:=0
+   mut y:= i32(0)
+   mut d:= i32(0)
 
    for arg in os.args[1..] {
       match arg {
