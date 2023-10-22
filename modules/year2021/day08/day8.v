@@ -63,7 +63,7 @@ pub fn task1() string {
 
 //---------------------------------------------------------------------------//
 fn cnt ( a string, b string ) i32 {
-   mut r := 0
+   mut r := i32(0)
    ab:=a.bytes()
    bb:=b.bytes()
    for c in bb {

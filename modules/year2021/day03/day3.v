@@ -3,7 +3,7 @@ module day03
 import os
 import strconv
 
-const path = 'modules/year2021/day3/input'
+const path = 'modules/year2021/day03/input'
 
 fn to_i64( s string ) i64 {
 	return strconv.parse_int ( s, 10, 64 ) or {0}
@@ -44,7 +44,7 @@ pub fn task1() string {
     return ans.str()
 }
 
-fn count_ones ( d [][]u8, i i32 ) u64 {
+fn count_ones ( d [][]u8, i u64 ) u64 {
     mut ret := u64(0);
     for s in d {
         if s.len>0 && s[i] == 49 {
@@ -56,11 +56,11 @@ fn count_ones ( d [][]u8, i i32 ) u64 {
 }
 
 fn generator_rating ( data [][]u8, o2 bool ) u64 {
-    mut dta := data.clone()
-    mut len := u64(dta.len)
-    for i := 0; len>1 ; i++ {
-        ones := count_ones ( dta, i )
-        b := 48 + u8( ones >= len - ones ) ^ u8(o2)
+   mut dta := data.clone()
+   mut len := u64(dta.len)
+   for i := u64(0); len>1 ; i++ {
+      ones := count_ones ( dta, i )
+      b := 48 + u8( ones >= len - ones ) ^ u8(o2)
 
         for mut s in dta {
             if s.len>0 && s[i]==b {

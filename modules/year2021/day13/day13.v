@@ -47,7 +47,7 @@ fn load ( ) !St {
     for l>0 {
         c := buf[11]
         v := buf[13..].bytestr().int()
-        fold << Tci{c, v}
+        fold << Tci{c, i32(v)}
         l = file.read_bytes_into_newline( mut buf )!-1
     }
 

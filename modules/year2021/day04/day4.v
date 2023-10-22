@@ -3,7 +3,7 @@ module day04
 import os
 
 //---------------------------------------------------------------------------//
-const path = 'modules/year2021/day4/input'
+const path = 'modules/year2021/day04/input'
 
 //---------------------------------------------------------------------------//
 // Play bingo on all boards
@@ -32,12 +32,12 @@ fn parse_numbers ( file os.File ) []i32 {
 	    mut i_e:= buf.index ( 44 )
 	    mut len:= i_e - i_s
 	    for len > 0 {
-		numbers << buf[i_s..i_e].bytestr().int()
+		numbers << i32(buf[i_s..i_e].bytestr().int())
 		i_s = i_e + 1
 		len = buf[i_s..].index ( 44 )
 		i_e = i_s + len
 	    }
-	    numbers << buf[i_s..].bytestr().int()
+	    numbers << i32(buf[i_s..].bytestr().int())
     }
     return numbers
 }

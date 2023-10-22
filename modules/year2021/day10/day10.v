@@ -130,7 +130,7 @@ pub fn task1() string {
     //data := load_test()
 
     for l in data {
-        mut i := 0
+	mut i := i32(0)
         result := check ( l, &i )
 
         ans += 3 * i32( close_paren == result ) +
@@ -150,7 +150,7 @@ pub fn task2() string {
    mut data := load_test ()
 
    for mut l in data {
-      mut i := 0
+      mut i := i32(0)
       if -1 == check ( l, &i ) {
          for j := 0; j < 2 * l.len; j++ {
             for k := 0; k < l.len-1; k++ {
