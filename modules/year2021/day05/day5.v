@@ -2,7 +2,7 @@ module day05
 
 import os
 
-const path = 'modules/year2021/day5/input'
+const path = 'modules/year2021/day05/input'
 
 struct Point{
 mut:

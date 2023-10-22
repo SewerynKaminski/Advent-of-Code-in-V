@@ -2,7 +2,7 @@ module day09
 
 import os
 
-const path = 'modules/year2021/day9/input'
+const path = 'modules/year2021/day09/input'
 
 fn load( path string ) ![][]u8 {
    mut file := os.open_file ( path, 'r' )!

@@ -4,7 +4,7 @@ import os
 import math
 import arrays
 
-const path = 'modules/year2021/day7/input'
+const path = 'modules/year2021/day07/input'
 
 fn load ( file os.File ) []i64 {
     mut ret := []i64{}

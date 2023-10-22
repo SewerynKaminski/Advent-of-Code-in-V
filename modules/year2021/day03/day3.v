@@ -56,11 +56,19 @@ fn count_ones ( d [][]u8, i u64 ) u64 {
 }
 
 fn generator_rating ( data [][]u8, o2 bool ) u64 {
+<<<<<<< Updated upstream
    mut dta := data.clone()
    mut len := u64(dta.len)
    for i := u64(0); len>1 ; i++ {
       ones := count_ones ( dta, i )
       b := 48 + u8( ones >= len - ones ) ^ u8(o2)
+=======
+    mut dta := data.clone()
+    mut len := dta.len
+    for i := 0; len>1 ; i++ {
+        ones := count_ones ( dta, i )
+        b := 48 + u8( ones >= len - ones ) ^ u8(o2)
+>>>>>>> Stashed changes
 
         for mut s in dta {
             if s.len>0 && s[i]==b {
