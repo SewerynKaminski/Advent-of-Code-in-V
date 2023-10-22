@@ -17,17 +17,10 @@ mut:
 fn load ( ) !St {
     mut data := map[u16]u8{}
 
-    mut buf := []u8{len:128}
-    mut file := os.open_file ( path, 'r' )!
-
-    mut l:= file.read_bytes_into_newline( mut buf )!-1
-    t := buf[0..l].bytestr()
-    l = file.read_bytes_into_newline( mut buf )!-1
-
-    l = file.read_bytes_into_newline( mut buf )!-1
-    for l>0 {
-        data[ (u16(buf[0]) << 8) | buf[1] ] = buf[6]
-        l = file.read_bytes_into_newline( mut buf )!-1
+    lines:= os.read_lines( path )!
+    t:= lines[0]
+    for line in lines[2..] {    
+       data[ (u16(line[0]) << 8) | line[1] ] = line[6]
     }
 
     return St{t, data}
@@ -57,16 +50,16 @@ pub fn task1() string {
 
     vals := ma.values()
     ans := arrays.max(vals)or{0} - arrays.min(vals)or{0}
-
+    
     return ans.str()
 }
 
 //---------------------------------------------------------------------------//
 fn cnt ( mut memo map[u32]map[u8]u64, ma map[u16]u8, a u8, b u8, depth u8 ) map[u8]u64 {
-    if depth == 0 {
+    if depth == 0 { 
         mut ret := map[u8]u64{}
-        ret[b] = u64(1)
-        return ret
+	ret[b] = u64(1)
+	return ret
     }
     i := (u32(depth) << 16) | (u32(a) << 8) | u32(b);
     if i in memo { return memo[i] }
@@ -88,7 +81,7 @@ fn cnt ( mut memo map[u32]map[u8]u64, ma map[u16]u8, a u8, b u8, depth u8 ) map[
 pub fn task2() string {
     //testinput -> 2188189693529
     data := load ( ) or { return term.bright_red("[Error]Load:"+err.str()) }
-
+    
     mut memo:= map[u32]map[u8]u64{}
 
     mut zz := map[u8]u64{}
@@ -103,3 +96,4 @@ pub fn task2() string {
 
    return ans.str()
 }
+
