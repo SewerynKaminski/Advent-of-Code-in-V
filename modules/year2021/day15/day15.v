@@ -3,8 +3,6 @@ module day15
 import os
 import term
 
-const int32_max = 0x7fffffff
-
 //---------------------------------------------------------------------------//
 fn load ( )![]string {
    data := os.read_lines('modules/year2021/day15/input')!
@@ -19,7 +17,7 @@ fn min ( a int, b int ) int {
 }
 
 //---------------------------------------------------------------------------//
-fn traverse ( d []string ) u64 {
+fn traverse2 ( d []string ) u64 {
     mut a := []int{}
     width := d.len
 
@@ -45,14 +43,15 @@ fn traverse ( d []string ) u64 {
     return u64(a[0])
 }
 
-//---------------------------------------------------------------------------//
 pub fn task1() string {
    data:= load() or { return term.bright_red("[Error]Load:"+err.str())}
 
-   ans := traverse ( data ) - data[0][0] + 48;
+   ans := traverse2 ( data ) - data[0][0] + 48;
 
    return ans.str()
 }
+
+const int32_max = 0x7fffffff
 
 //---------------------------------------------------------------------------//
 struct QQ {

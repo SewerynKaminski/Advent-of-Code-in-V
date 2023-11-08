@@ -1,6 +1,7 @@
 module day03
 
 import os
+import term
 import strconv
 
 const path = 'modules/year2021/day03/input'
@@ -16,16 +17,13 @@ pub fn task1() string {
     //aoc.test_enable()
     //file := if aoc.is_test_enabled() { test_input() } else { puzzle_input }
     
-    mut file := os.open_file ( path, 'r' ) or {
-	println("error1 opening 'input' file")
-	return "[Error]open"
-    }
+    mut file := os.open_file ( path, 'r' ) or { return term.bright_red("[Error]open:"+err.str())}
     mut l := file.read_bytes_into_newline( mut line ) or {0}-1
 
     mut cnt := i32(0)
     for l>0 {
 	for data.len < l {
-	data << 0
+        	data << 0
 	}
         for i := u64(0); i < l; i++  {
             data[i]+= line[i]-48
@@ -56,15 +54,15 @@ fn count_ones ( d [][]u8, i u64 ) u64 {
 }
 
 fn generator_rating ( data [][]u8, o2 bool ) u64 {
-   mut dta := data.clone()
-   mut len := u64(dta.len)
-   for i := u64(0); len>1 ; i++ {
-      ones := count_ones ( dta, i )
-      b := 48 + u8( ones >= len - ones ) ^ u8(o2)
+    mut dta := data.clone()
+    mut len := u64(dta.len)
+    for i := u64(0); len>1 ; i++ {
+        ones := count_ones ( dta, i )
+        b := 48 + u8( ones >= len - ones ) ^ u8(o2)
 
         for mut s in dta {
             if s.len>0 && s[i]==b {
-                s.clear()
+            	s.clear()
                 len--
             }
         }
@@ -86,10 +84,7 @@ pub fn task2() string {
 
     //aoc.test_enable()
     //file := if aoc.is_test_enabled() { test_input() } else { puzzle_input }
-    mut file := os.open_file ( path, 'r' ) or {
-	println("error2 opening 'input' file")
-	return "[Error]open"
-    }
+    mut file := os.open_file ( path, 'r' ) or {return term.bright_red("[Error]open:"+err.str())}
 
     mut l := file.read_bytes_into_newline ( mut line ) or { print("${err}") exit(0)}-1
     for l > 0 {

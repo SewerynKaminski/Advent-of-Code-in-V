@@ -1,6 +1,7 @@
 module day10
 
 import os
+import term
 import arrays
 
 const path = 'modules/year2021/day10/input'
@@ -126,11 +127,11 @@ fn check ( s []u8, i &i32) i32 {
 pub fn task1() string {
     mut ans := 0
 
-    data := load ( ) or { return "[Error]Load"}
+    data := load ( ) or { return term.bright_red("[Error]Load:"+err.str())}
     //data := load_test()
 
     for l in data {
-	mut i := i32(0)
+        mut i := i32(0)
         result := check ( l, &i )
 
         ans += 3 * i32( close_paren == result ) +
@@ -146,7 +147,7 @@ pub fn task1() string {
 pub fn task2() string { 
    mut scores := []u64{}
 
-   //mut data := load () or { return "[Error]Load"}
+   //mut data := load () or { return term.bright_red("[Error]Load:"+err.str())}
    mut data := load_test ()
 
    for mut l in data {

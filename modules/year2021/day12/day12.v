@@ -1,6 +1,7 @@
 module day12
 
 import os
+import term
 
 //---------------------------------------------------------------------------//
 const path = 'modules/year2021/day12/input'
@@ -71,7 +72,7 @@ fn traverse ( tree []string, visited map[string]int, node string,
 
 //---------------------------------------------------------------------------//
 pub fn task1() string {
-   data := load() or { return "[Error]"+err.str() }
+   data := load() or { return term.bright_red("[Error]Load:"+err.str()) }
    mut visited := map[string]int{}
    ans := traverse ( data, visited, "start", has_visited )
 
@@ -80,7 +81,7 @@ pub fn task1() string {
 
 //---------------------------------------------------------------------------//
 pub fn task2() string { 
-   data := load ( ) or { return "[Error]"+err.str() }
+   data := load ( ) or { return term.bright_red("[Error]Load:"+err.str()) }
 
    visited := map[string]int{}
    ans := traverse ( data, visited, "start", has_visited2 );

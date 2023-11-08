@@ -1,6 +1,7 @@
 module day11
 
 import os
+import term
 
 const path = 'modules/year2021/day11/input'
 
@@ -67,7 +68,7 @@ fn flash ( mut data [][]u8 ) i32 {
 pub fn task1() string {
     mut ans := 0
 
-    mut data := load ( ) or { return "[Error]Load"}
+    mut data := load ( ) or { return term.bright_red("[Error]Load:"+err.str())}
 
     //show ( data )
 
@@ -79,10 +80,11 @@ pub fn task1() string {
     return ans.str()
 }
 
+//---------------------------------------------------------------------------//
 pub fn task2() string { 
    mut ans := 0
 
-   mut data := load () or { return "[Error]Load"}
+   mut data := load () or { return term.bright_red("[Error]Load:"+err.str())}
 
    for  {
       ans+=1
@@ -95,3 +97,4 @@ pub fn task2() string {
    return ans.str()
 }
 
+//---------------------------------------------------------------------------//

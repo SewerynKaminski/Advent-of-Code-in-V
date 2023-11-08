@@ -77,8 +77,7 @@ fn step_south_facing ( mut data [][]u8 ) u64 {
 }
 
 fn step ( mut data [][]u8 ) u64 {
-	return step_east_facing ( mut data ) 
-	     + step_south_facing ( mut data )
+	return step_east_facing ( mut data ) + step_south_facing ( mut data )
 }
 
 //---------------------------------------------------------------------------//

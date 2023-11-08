@@ -1,6 +1,7 @@
 module day07
 
 import os
+import term
 import math
 import arrays
 
@@ -25,9 +26,7 @@ fn load ( file os.File ) []i64 {
 
 pub fn task1() string {
    mut ans := i64(0x7fffffffffffffff)
-   mut file := os.open_file ( path, 'r' ) or {      
-      return "[Error]open"
-   }
+   mut file := os.open_file ( path, 'r' ) or { return term.bright_red("[Error]open:"+err.str())}
 
    data := load ( file )
 	
@@ -51,9 +50,7 @@ pub fn task1() string {
 pub fn task2() string { 
    mut ans := i64(0x7fffffffffffffff)
 
-   mut file := os.open_file ( path, 'r' ) or {      
-      return "[Error]open"
-   }
+   mut file := os.open_file ( path, 'r' ) or { return term.bright_red("[Error]open:"+err.str())}
 
    data := load ( file )
 

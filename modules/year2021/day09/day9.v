@@ -1,6 +1,7 @@
 module day09
 
 import os
+import term
 
 const path = 'modules/year2021/day09/input'
 
@@ -67,7 +68,7 @@ fn low_points( data [][]u8 ) []Tri {
 pub fn task1() string {
    mut ans := 0
 
-   data := load ( path )or { return "[Error]Load"}
+   data := load ( path )or { return term.bright_red("[Error]Load:"+err.str())}
 
    lp := low_points( data )
    for v in lp {
@@ -89,13 +90,13 @@ fn area( mut data [][]u8, x u32, y u32 ) u64 {
 }
 
 pub fn task2() string { 
-   mut data := load( path ) or { return "[Error]Load"}
+   mut data := load( path ) or { return term.bright_red("[Error]Load:"+err.str())}
 
    lp := low_points( data )
 
-	mut areas := []u64{}
+   mut areas := []i64{}
    for v in lp {
-	   areas << area ( mut data, u32(v.x), u32(v.y) )
+       areas << area ( mut data, u32(v.x), u32(v.y) )
    }
 
    areas.sort ( |a,b| a > b )

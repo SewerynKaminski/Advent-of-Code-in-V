@@ -1,6 +1,7 @@
 module day08
 
 import os
+import term
 
 const path = 'modules/year2021/day08/input'
 
@@ -45,9 +46,7 @@ fn load ( file os.File ) []Display {
 pub fn task1() string {
    mut ans := 0
 
-   mut file := os.open_file ( path, 'r' ) or {
-      return "[Error]open"
-   }
+   mut file := os.open_file ( path, 'r' ) or { return term.bright_red("[Error]open:"+err.str())}
 
    data := load ( file )
 
@@ -88,9 +87,7 @@ fn contains ( a string, b string ) bool {
 pub fn task2() string { 
    mut ans := 0
 
-   mut file := os.open_file ( path, 'r' ) or {
-      return "[Error]open"
-   }
+   mut file := os.open_file ( path, 'r' ) or { return term.bright_red("[Error]open:"+err.str())}
 
    data := load ( file )
 

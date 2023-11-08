@@ -1,6 +1,7 @@
 module day02
 
 import os
+import term
 import strconv
 
 const path = 'modules/year2021/day02/input'
@@ -16,10 +17,7 @@ pub fn task1() string {
 
     //aoc.test_enable();
     //file := aoc.is_test_enabled() ? test_input() : puzzle_input;
-    mut file := os.open_file ( path, 'r' ) or {
-	println("error opening 'input' file")
-	return "[Error]open"
-    }
+    mut file := os.open_file ( path, 'r' ) or {return term.bright_red("[Error]open:"+err.str())}
     mut l := file.read_bytes_into_newline( mut line ) or {0}-1
     for l>0 {	
         s := line[0..l].bytestr().trim('\n' )
@@ -45,10 +43,7 @@ pub fn task2() string {
 
     //aoc::test_enable();
     //auto& file = aoc::is_test_enabled() ? test_input() : puzzle_input;
-    mut file := os.open_file ( path, 'r' ) or {
-	println("error opening 'input' file")
-	return "[Error]open"
-    }
+    mut file := os.open_file ( path, 'r' ) or {	return term.bright_red("[Error]open:"+err.str()) }
 
     mut l := file.read_bytes_into_newline( mut line ) or {0}-1
     for l>0 {

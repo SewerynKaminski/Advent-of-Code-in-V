@@ -1,5 +1,8 @@
 module aoc
 
+import term
+import time
+
 //pub struct Year{
 //	pub:
 //	y u16
@@ -24,10 +27,66 @@ pub struct Day {
 	task_2 fn()string = unsafe{nil}
 }
 
-pub fn(t Day) run() {
-	println ( "  Day ${t.day}" )
-	println ( "    Task 1: ${t.task_1()}" )
-	println ( "    Task 2: ${t.task_2()}" )
+struct Task{
+   run fn()string=unsafe{nil}
+}
+
+struct St {
+ pub:   
+   //tsk fn()string=unsafe{nil}// nie dzial?
+   tsk Task
+ pub mut:
+   fin bool
+}
+
+fn(shared v St) run() string {
+   mut ans:=''
+   //mut f := fn()string{return''}
+   lock v {
+      //ans = v.day.task() // TODO:dlaczego dziala?!
+      ans = v.tsk.run() // TODO:dlaczego nie dziala?!
+      v.fin = true
+   }
+   return ans
+}
+
+const spiner_chars=['|','/','-','\\']
+fn spiner( i u8 ) {
+   //c := term.get_cursor_position() or {term.Coord{x:0,y:0}}
+   //term.set_cursor_position( x:c.x, y:c.y ) 
+   print( spiner_chars[i&3] )
+   //print( '\n\b\e[A' )//\eM
+   print( '\n\e[A' )
+   //term.set_cursor_position( c )
+}
+
+fn spin ( txt string, tsk fn()string ) string {
+   shared v:= unsafe{St{Task{tsk}, false}}
+   mut h := spawn v.run()
+
+   mut t:=0
+   mut st:=u8(0)
+
+   for !v.fin {
+        t+=1
+	if t>10 {
+	   print(txt) spiner ( st )
+	   st+=1
+           t=0
+	}
+	time.sleep ( 10*time.millisecond )
+   }
+   ans := h.wait()
+   print ( txt ) println ( ans )
+   return ans
+}
+
+pub fn(day Day) run() {
+   print ( "\e[?25l" ) // hide cursor
+   println ( term.bright_green("  Day ${day.day}") )
+   spin ( term.green("    Task 1: "), day.task_1 )
+   spin ( term.green("    Task 2: "), day.task_2 )
+   print ( "\e[?25h" ) // show cursor
 }
 
 pub struct Days{

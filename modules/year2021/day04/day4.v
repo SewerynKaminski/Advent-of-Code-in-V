@@ -1,6 +1,7 @@
 module day04
 
 import os
+import term
 
 //---------------------------------------------------------------------------//
 const path = 'modules/year2021/day04/input'
@@ -70,7 +71,7 @@ fn parse_boards ( file os.File ) []BingoBoard {
 pub fn task1() string {
     //aoc::test_enable();
     //auto& file = aoc::is_test_enabled() ? test_input() : puzzle_input;
-    mut file := os.open_file ( path, 'r' ) or {return "[Error]open"} 
+    mut file := os.open_file ( path, 'r' ) or { return term.bright_red("[Error]open:"+err.str())} 
 
     numbers := parse_numbers ( file )
     mut boards := parse_boards ( file )
@@ -81,7 +82,7 @@ pub fn task1() string {
 
 pub fn task2() string { 
    //auto& file = aoc::is_test_enabled() ? test_input() : puzzle_input;
-   mut file := os.open_file ( path, 'r' ) or {return "[Error]open"} 
+   mut file := os.open_file ( path, 'r' ) or {return term.bright_red("[Error]open:"+err.str())} 
 
    numbers := parse_numbers ( file )
    mut boards := parse_boards ( file )

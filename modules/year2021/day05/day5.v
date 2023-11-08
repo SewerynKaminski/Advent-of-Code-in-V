@@ -1,6 +1,7 @@
 module day05
 
 import os
+import term
 
 const path = 'modules/year2021/day05/input'
 
@@ -63,10 +64,7 @@ fn is_vertical_or_horizontal ( line Line ) bool {
 
 pub fn task1() string {
     //file = aoc::is_test_enabled() ? test_input() : puzzle_input;
-    mut file := os.open_file ( path, 'r' ) or {
-	println("error1 opening 'input' file")
-	return "[Error]open"
-    }
+    mut file := os.open_file ( path, 'r' ) or {	return term.bright_red("[Error]open:"+err.str())}
 
     data := load ( file )
     //std::unordered_map<Point, int, Hash_Point> hash;
@@ -97,10 +95,7 @@ pub fn task1() string {
 
 pub fn task2() string { 
    //auto& file = aoc::is_test_enabled() ? test_input() : puzzle_input;
-   mut file := os.open_file ( path, 'r' ) or {
-       println("error1 opening 'input' file")
-       return "[Error]open"
-   }
+   mut file := os.open_file ( path, 'r' ) or { return term.bright_red("[Error]open:"+err.str())}
 
    data := load ( file )
    mut hash := map[u64]i32{}

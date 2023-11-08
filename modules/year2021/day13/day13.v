@@ -2,6 +2,7 @@ module day13
 
 //---------------------------------------------------------------------------//
 import os
+import term
 import datatypes
 
 //---------------------------------------------------------------------------//
@@ -46,8 +47,8 @@ fn load ( ) !St {
     l = file.read_bytes_into_newline( mut buf )!-1    
     for l>0 {
         c := buf[11]
-        v := buf[13..].bytestr().int()
-        fold << Tci{c, i32(v)}
+        v := i32(buf[13..].bytestr().int())
+        fold << Tci{c, v}
         l = file.read_bytes_into_newline( mut buf )!-1
     }
 
@@ -56,7 +57,7 @@ fn load ( ) !St {
 
 //---------------------------------------------------------------------------//
 pub fn task1() string {
-    mut data := load ( ) or { return "[Error]"+err.str() }
+    mut data := load ( ) or { return term.bright_red("[Error]Load:"+err.str()) }
 
     a := data.f[0].c
     v := data.f[0].v
@@ -71,9 +72,9 @@ pub fn task1() string {
         }
     }
 
-    mut paper := datatypes.Set[int]{}
+    mut paper := datatypes.Set[u32]{}
     for p in data.p {
-        paper.add( ( p.x << 16 ) | p.y )
+        paper.add( ( u32(p.x) << 16 ) | u32(p.y) )
     }
     ans := paper.size()
 
@@ -82,7 +83,7 @@ pub fn task1() string {
 
 //---------------------------------------------------------------------------//
 pub fn task2() string { 
-    mut data := load ( ) or { return "[Error]"+err.str() }
+    mut data := load ( ) or { return term.bright_red("[Error]Load:"+err.str()) }
 
     for f in data.f {
         for mut p in data.p {

@@ -6,13 +6,7 @@ import math
 
 //---------------------------------------------------------------------------//
 const path = 'modules/year2021/day23/input'
-/*const input =
-'#############\n'+
-'#...........#\n'+
-'###B#C#B#D###\n'+
-'  #A#D#C#A#  \n'+
-'  #########  \n'
-*/
+
 //---------------------------------------------------------------------------//
 struct Board {
 	mut:
@@ -30,6 +24,13 @@ fn load() !Board {
 	}
 
 	lines := os.read_lines(path)!
+/*d:=
+'#############\n'+
+'#...........#\n'+
+'###B#C#B#D###\n'+
+'  #A#D#C#A#  \n'+
+'  #########  \n'
+        lines := d.split('\n')*/
 	//for l in lines {
 	//	println(l)
 	//}
@@ -74,11 +75,9 @@ fn(b Board) show(){
 //---------------------------------------------------------------------------//
 fn(b Board) inplace ( i u8, l u8 ) bool {
    //return b.slots[i][1]==i+1 && (l==1 || b.slots[i][0]==i+1)
-   mut ll := i8(b.slots[i].len-1)
-   for ll>=l && b.slots[i][ll] == i+1 {
-      ll-=1
-   }
-   return ll<l
+   mut ll:= b.slots[i].len-1
+   for ll>=l && b.slots[i][ll]==i+1 { ll-=1 }
+   return ll+1==l
 }
 
 //---------------------------------------------------------------------------//
@@ -143,8 +142,16 @@ fn(mut b Board) sethdr ( hi u8, i u8, l u8 ) bool {
 	2 456
 	3 56
     	*/
+
+//
+   mut l0:=0
+   for v in b.slots[i] {
+      if v>0 {break}
+      l0+=1
+   }
 	
-   if b.hallway[hi]==0 && ((b.slots[i][l]>0 && l==0) || (l==1 && b.slots[i][0]==0 && b.slots[i][1]>0) ) {
+   //if b.hallway[hi]==0 && ((b.slots[i][l]>0 && l==0) || (l==1 && b.slots[i][0]==0 && b.slots[i][1]>0) ) {
+   if b.hallway[hi]==0 && l0==l /*&& b.slots[i][l]>0*/ {
 	v:= b.slots[i][l]
 	b.hallway[hi] = v
 	b.slots[i][l]=0
@@ -176,7 +183,7 @@ fn(mut b Board) gethdr ( hi u8, i u8, l u8 ) i64 {
    if b.hallway[hi]>0 {
       v:= b.hallway[hi]
       b.slots[i][l] = v
-      b.hallway[hi] = 0
+      b.hallway[hi]=0
       mut hii:=0;
       if hi==0 {}
       else if hi==6{ hii=10}
@@ -193,48 +200,38 @@ fn(mut b Board) gethdr ( hi u8, i u8, l u8 ) i64 {
 
 //---------------------------------------------------------------------------//
 fn(mut b Board) place( min &i64 ) {
-   for _ in 0..4 {
-      for i in 0..7 {
+      for i:=u8(0); i<7; i++ {
 	 v:=b.hallway[i]
-	 if v>0 {
-	    b.hallway[i] = 0
-	    ok:= b.hdrchk ( i, v-1 )
-	    b.hallway[i] = v 
-	    if ok {
-	    mut l := i8(b.slots[0].len-1)
-	    for l>=0 && b.slots[v-1][l]==v {
-	    	l-=1
-	    }
+         if v==0 { continue }
+	 b.hallway[i] = 0
+	 ok:= b.hdrchk(i,v-1)
+	 b.hallway[i] = v 
+	 if ok {
+            mut l:= i8(b.slots[0].len-1)
+            for l>=0 && b.slots[v-1][l]==v {l-=1}
+            if l==-1 {continue}
 	    l0:=l
-	    for l>=0 && b.slots[v-1][l]==0 {
-	    	l-=1
-	    }
-	    if l==-1 && l0>=0 {
-	    	//b.slots[v-1][l0]==
-		b.steps += b.gethdr ( i, v-1, u8(l0) )
-	    }
-	    
-	       /*if b.slots[v-1][0]==0 && (b.slots[v-1][1]==0 || b.slots[v-1][1]==v)  {
-		  if b.slots[v-1][1]==0 {
-			b.steps += b.gethdr(i,v-1,1)
-		  } else {
-			b.steps += b.gethdr(i,v-1,0)
-		  }
-	       }*/
-            }
-         }
-      }   
-   }
-	
-   mut done:=true
+	    for l>=0 && b.slots[v-1][l]==0 {l-=1}
+	    if l==-1{ b.steps += b.gethdr(i,v-1,u8(l0)) i=255}
+	 }
+      }
+
+// Teoretycznie gdy hdr jest empty mamy solve'a	i nie trzeba sprawdzac slotow
+/*mut sum:=0
+for v in b.hallway { sum+=v}
+if sum==0 && *min > b.steps {
+      unsafe{ *min = b.steps }
+      println ( *min )
+}*/
+
    for i in 0..4 {
-      if !(i+1==b.slots[i][0] && b.slots[i][0]==b.slots[i][1]) {
-         done = false break
+      for l in 0..b.slots[0].len {
+      	if i+1!=b.slots[i][l] {return}
       }
    }
-   if done && *min > b.steps {
+   if *min > b.steps {
       unsafe{ *min = b.steps }
-      //println ( *min )
+      println ( *min )
    }
 }
 
@@ -242,6 +239,8 @@ fn(mut b Board) place( min &i64 ) {
 fn solve ( b Board, min &i64 ) {
         mut bc := Board{b.hallway.clone(), b.slots.clone(),b.steps}
 	bc.place ( min )
+	mut sum:=true for v in bc.hallway {sum=sum && (v>0)}
+	if sum { return }
 	if bc.steps > *min { return }
 	s := bc.steps
 	for level in 0..b.slots[0].len {
@@ -264,6 +263,7 @@ pub fn task1() string {
 	mut data:=load() or { return term.bright_red("[Error]Load:" + err.str()) }
 	//slots.show ( )
 	ans := i64(0x7fffffffffffffff)	// max signed int 64bit
+	
 	solve ( data, &ans )
 
 	return ans.str()
@@ -282,7 +282,7 @@ pub fn task2() string {
 	data.slots[1].insert(1,3)
 	data.slots[2].insert(1,2)
 	data.slots[3].insert(1,1)
-// 15156 to low
+	
 	data.show()
 	ans := i64(0x7fffffffffffffff)
 	solve( data, &ans )

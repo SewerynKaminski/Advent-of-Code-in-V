@@ -12,7 +12,7 @@ fn(mut this BingoBoard) set_board_from ( s string ) {
    this.board.clear()
    for v in t {
       if v.len > 0 {
-	this.board << i32(v.int())
+         this.board << i32(v.int())
       }
    }
 }
@@ -82,7 +82,7 @@ fn(this BingoBoard) score() i32 {
             sum += v
         }
     }
-  return i32(sum * this.last_move)
+    return i32(sum * this.last_move)
 }
 
 fn(mut this BingoBoard) reset(){
