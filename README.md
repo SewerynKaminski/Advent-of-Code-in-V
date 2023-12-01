@@ -37,3 +37,11 @@ Advent of Code solutions written in V language
 * [Day 25 - Sea Cucumber](modules/year2021/day25) -  :star:
     
 </details>
+<details>
+    <summary>
+        <a href="modules/year2023">2023</a> 
+        :star:
+    </summary>
+    
+* [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
+</details>
