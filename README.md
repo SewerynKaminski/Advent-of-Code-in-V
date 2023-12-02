@@ -44,4 +44,5 @@ Advent of Code solutions written in V language
     </summary>
     
 * [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
+* [Day 2 - Cube Conundrum](modules/year2023/day02) - :star:
 </details>
