@@ -40,7 +40,7 @@ Advent of Code solutions written in V language
 <details>
     <summary>
         <a href="modules/year2023">2023</a> 
-        :star: :star:
+        :star: :star: :star:
     </summary>
     
 * [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
