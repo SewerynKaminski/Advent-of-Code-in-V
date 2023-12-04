@@ -40,10 +40,11 @@ Advent of Code solutions written in V language
 <details>
     <summary>
         <a href="modules/year2023">2023</a> 
-        :star: :star: :star:
+        :star: :star: :star: :star:
     </summary>
     
 * [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
 * [Day 2 - Cube Conundrum](modules/year2023/day02) - :star:
 * [Day 3 - Gear Ratios](modules/year2023/day03) - :star:
+* [Day 4 - Scratchcards](modules/year2023/day04) - :star:
 </details>
