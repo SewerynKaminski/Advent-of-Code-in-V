@@ -47,5 +47,5 @@ Advent of Code solutions written in V language
 * [Day 2 - Cube Conundrum](modules/year2023/day02) - :star:
 * [Day 3 - Gear Ratios](modules/year2023/day03) - :star:
 * [Day 4 - Scratchcards](modules/year2023/day04) - :star:
-* [Day 5 - If You Give A Seed A Fertilizer](modules/year2023/day04) - :star:
+* [Day 5 - If You Give A Seed A Fertilizer](modules/year2023/day05) - :star:
 </details>
