@@ -2,7 +2,6 @@ module day06
 
 import os
 import term
-//import arrays
 import math
 
 const path='modules/year2023/day06/input'
@@ -16,17 +15,11 @@ mut:
 
 fn load ( ) ![]DATA {
    mut data := []DATA {}
-   //mut line := []u8{len:1024}
-   //mut file := os.open_file ( path, 'r' )!
    lines:= os.read_lines( path )!
-   //mut l := file.read_bytes_into_newline ( mut line ) or {0}-1
-   //mut s := line[0..l].bytestr().split ( ':' )
    mut s := lines[0].split ( ':' )
    times :=s[1].split( ' ' ).filter ( it.len>0 )
    timesi := times.map( it.i64() )
 
-   //l = file.read_bytes_into_newline( mut line ) or {0}-1   
-   //s = line[0..l].bytestr().split ( ':' )
    s = lines[1].split ( ':' )
    distances := s[1].split( ' ' ).filter ( it.len>0 )
    distancesi := distances.map( it.i64() )
@@ -35,7 +28,6 @@ fn load ( ) ![]DATA {
       data << DATA{time:t, distance:distancesi[i]}
    }
 
-   //file.close()
    return data
 }
 
