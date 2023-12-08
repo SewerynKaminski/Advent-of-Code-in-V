@@ -14,12 +14,9 @@ mut:
 
 fn load() ![]Ss {
    mut data := []Ss {}
-   mut line := []u8{len:1024}
-   mut file := os.open_file ( path, 'r' )!
-
-   mut l := file.read_bytes_into_newline ( mut line ) or {0}-1
-   for l>0 {
-      s := line[0..l].bytestr().split( ' ' )
+   lines:= os.read_lines( path )!
+   for line in lines {
+      s := line.split( ' ' )
       mut b := []u8{}
       for c in s[0] {
          if c>='2'[0] && c<='9'[0]{ b << c-48 }
@@ -30,11 +27,7 @@ fn load() ![]Ss {
          if c=='T'[0] { b << 10 }
       }
       data << Ss{hand: b, bid: s[1].i64() }
-
-      l = file.read_bytes_into_newline( mut line ) or {0}-1
    }
-   file.close()
-
    return data
 }
 
@@ -117,9 +110,6 @@ pub fn task1() string {
      } )
 
    for i,row in data {
-      //print ( type_of_hand ( row.hand ) )
-      //print ( row.hand )
-      //println ( row.bid * (data.len-i) )
       ans += row.bid * (data.len-i)
    }
 
