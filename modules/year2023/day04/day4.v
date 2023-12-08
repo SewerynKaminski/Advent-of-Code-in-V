@@ -31,12 +31,10 @@ fn insert_sorted ( mut a []int, w int ) {
 
 fn load() ![]Ss {
    mut data := []Ss {}
-   mut line := []u8{len:1024}
-   mut file := os.open_file ( path, 'r' )!
-   mut l := file.read_bytes_into_newline ( mut line ) or {0}-1
-   for l>0 {
+   lines := os.read_lines( path )!
+   for line in lines {
       mut card:=Ss{}
-      s := line[0..l].bytestr().split ( ':' )
+      s := line.split ( ':' )
       s2 := s[1].split ( ' | ' )
       for ws in s2[0].split ( ' ' ) { 
          if ws.len > 0 {
@@ -47,10 +45,8 @@ fn load() ![]Ss {
          if n.len>0 { card.have << n.int() }
       }
       data << card.clone()
-      l = file.read_bytes_into_newline( mut line ) or {0}-1
    }
    
-   file.close()
    return data
 }
 
