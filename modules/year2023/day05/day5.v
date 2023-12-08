@@ -127,45 +127,40 @@ fn (d DATA) humidity_to_location ( v i64 ) i64 {
    return v
 }
 
-fn readmap ( file os.File ) []MAP {
+fn readmap ( mut lines []string ) []MAP {
    mut m := []MAP{}
-   mut line := []u8{len:1024}
-   mut l := file.read_bytes_into_newline( mut line ) or {0}-1
-   //println ( line[0..l].bytestr() )
-   l = file.read_bytes_into_newline( mut line ) or {0}-1
-   for l > 0 {
-      //println ( line[0..l].bytestr() )
-      v := line[0..l].bytestr().split ( ' ' )
+   lines.pop()
+   mut line := lines.pop()
+   for line.len > 0 {
+      v := line.split ( ' ' )
       m << MAP {
                  dr : Range { s: v[0].i64(), e: v[0].i64()+v[2].i64()},
                  sr : Range { s: v[1].i64(), e: v[1].i64()+v[2].i64()},
                  d  : v[0].i64()-v[1].i64()
                }      
-      l = file.read_bytes_into_newline( mut line ) or {0}-1
+      line = lines.pop()
+      if lines.len==1{break}
    }
    return m
 }
 
 fn load ( ) !DATA {
    mut data := DATA {}
-   mut line := []u8{len:1024}
-   mut file := os.open_file ( path, 'r' )!
-
-   mut l := file.read_bytes_into_newline ( mut line ) or {0}-1
-   s := line[0..l].bytestr().split ( ': ' )
+   mut lines := os.read_lines( path )!
+   lines.reverse_in_place()
+   line := lines.pop()
+   s := line.split ( ': ' )
    seeds := s[1].split( ' ' )
    data.seeds = seeds.map( it.i64() )
-   l = file.read_bytes_into_newline( mut line ) or {0}-1
-
-   data.seed2soil = readmap ( file )
-   data.soil2fertilizer = readmap ( file )
-   data.fertilizer2water = readmap ( file )
-   data.water2light = readmap ( file )
-   data.light2temperature = readmap ( file )
-   data.temperature2humidity = readmap ( file )
-   data.humidity2location = readmap ( file )
+   lines.pop()
+   data.seed2soil = readmap ( mut lines )
+   data.soil2fertilizer = readmap ( mut lines )
+   data.fertilizer2water = readmap ( mut lines )
+   data.water2light = readmap ( mut lines )
+   data.light2temperature = readmap ( mut lines )
+   data.temperature2humidity = readmap ( mut lines )
+   data.humidity2location = readmap ( mut lines )
    
-   file.close()
    return data
 }
 
@@ -213,4 +208,3 @@ pub fn task2() string {
      
    return ans.str()
 }
-
