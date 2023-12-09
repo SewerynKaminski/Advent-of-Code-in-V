@@ -40,7 +40,7 @@ Advent of Code solutions written in V language
 <details>
     <summary>
         <a href="modules/year2023">2023</a> 
-        :star: :star: :star: :star: :star: :star: :star: :star:
+        :star: :star: :star: :star: :star: :star: :star: :star: :star:
     </summary>
     
 * [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
@@ -51,4 +51,5 @@ Advent of Code solutions written in V language
 * [Day 6 - Wait For It](modules/year2023/day06) - :star:
 * [Day 7 - Camel Cards](modules/year2023/day07) - :star:
 * [Day 8 - Haunted Wasteland](modules/year2023/day08) - :star:
+* [Day 9 - Mirage Maintenance](modules/year2023/day09) - :star:
 </details>
