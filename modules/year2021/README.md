@@ -1,7 +1,7 @@
 # Year 2021
 ## :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
     
-* [Day 1 - Sonar Sweep](modules/year2021/day01) - :star:
+* [Day 1 - Sonar Sweep](day01) - :star:
 * [Day 2 - Dive!](modules/year2021/day02) -  :star:
 * [Day 3 - Binary Diagnostic](modules/year2021/day03) -  :star:
 * [Day 4 - Giant Squid](modules/year2021/day04) -  :star:
