@@ -61,5 +61,7 @@ Advent of Code solutions written in V language
 Legend
 
 ⭐ - both parts
+
 🟊 - one part
+
 ✩ - none
