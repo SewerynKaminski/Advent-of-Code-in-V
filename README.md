@@ -55,4 +55,6 @@ Advent of Code solutions written in V language
 * [Day 9 - Mirage Maintenance](modules/year2023/day09) - :star:
 * [Day 10 - Pipe Maze](modules/year2023/day10) - :star:
 * [Day 11 - Cosmic Expansion](modules/year2023/day11) - :star:
+* [Day 12 - Hot Springs](modules/year2023/day12) - :star:
+* [Day 13 - Point of Incidence](modules/year2023/day13) - :star:
 </details>
