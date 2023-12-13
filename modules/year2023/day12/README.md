@@ -104,14 +104,12 @@ The first line of the above example would become:
 
 In the above example, after unfolding, the number of possible arrangements for some rows is now much larger:
 
-```
-???.### 1,1,3 - 1 arrangement
-.??..??...?##. 1,1,3 - 16384 arrangements
-?#?#?#?#?#?#?#? 1,3,1,6 - 1 arrangement
-????.#...#... 4,1,1 - 16 arrangements
-????.######..#####. 1,6,5 - 2500 arrangements
-?###???????? 3,2,1 - 506250 arrangements
-```
+* `???.### 1,1,3` - 1 arrangement
+* `.??..??...?##. 1,1,3` - 16384 arrangements
+* `?#?#?#?#?#?#?#? 1,3,1,6` - 1 arrangement
+* `????.#...#... 4,1,1` - 16 arrangements
+* `????.######..#####. 1,6,5` - 2500 arrangements
+* `?###???????? 3,2,1` - 506250 arrangements
 
 After unfolding, adding all of the possible arrangement counts together produces 525152.
 
