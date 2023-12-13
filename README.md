@@ -7,7 +7,7 @@ Advent of Code solutions written in V language
         <a href="modules/year2021">2021</a> 
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
-        :star: :star: :star: :star: :star: :star: 🟊
+        :star: :star: :star: :star: :star:
     </summary>
     
 * [Day 1 - Sonar Sweep](modules/year2021/day01) - :star:
@@ -41,7 +41,7 @@ Advent of Code solutions written in V language
     <summary>
         <a href="modules/year2023">2023</a> 
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-        :star:
+        :star: :star: 🟊
     </summary>
     
 * [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
