@@ -58,10 +58,8 @@ Advent of Code solutions written in V language
 * [Day 12 - Hot Springs](modules/year2023/day12) - 🟊
 * [Day 13 - Point of Incidence](modules/year2023/day13) - :star:
 </details>
+
 Legend
-
-⭐ - both parts
-
-🟊 - one part
-
-✩ - none
+* ⭐ - both parts
+* 🟊 - one part
+* ✩ - none
