@@ -41,7 +41,7 @@ Advent of Code solutions written in V language
     <summary>
         <a href="modules/year2023">2023</a> 
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-        :star: :star: 🟊 ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+        :star: :star: :star: 🟊 ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
     </summary>
     
 * [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
@@ -57,6 +57,8 @@ Advent of Code solutions written in V language
 * [Day 11 - Cosmic Expansion](modules/year2023/day11) - :star:
 * [Day 12 - Hot Springs](modules/year2023/day12) - 🟊
 * [Day 13 - Point of Incidence](modules/year2023/day13) - :star:
+* [Day 14 - Parabolic Reflector Dish](modules/year2023/day14) - :star:
+* 
 </details>
 
 Legend
