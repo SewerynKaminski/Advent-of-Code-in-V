@@ -3,8 +3,10 @@
 import os
 import term
 import aoc
+import math
 import year2020
 import year2021
+import year2023
 
 struct YD {
    y i32
@@ -12,7 +14,8 @@ struct YD {
 }
 
 const years = [ YD{ y:year2020.year, d:year2020.days},
-	        YD{ y:year2021.year, d:year2021.days}
+	        YD{ y:year2021.year, d:year2021.days},
+		YD{ y:year2023.year, d:year2023.days}
           ]
 
 fn ok(r i32, v i32 ) bool{
@@ -53,24 +56,39 @@ fn run_day ( days aoc.Days, di i32 ) {
 
 fn main() {
    mut y:=i32(0)
-   mut d:=i32(0)
+   mut days:=[]bool { len:25, init:false }
 
    for arg in os.args[1..] {
-      match arg {
-	'1','2','3','4','5','6','7','8','9','10',
-	'11','12','13','14','15','16','17','18','19','20',
-        '21','22','23','24','25'{d=i32(arg.int())}
-	'2020','2021'{y=i32(arg.int())}
-	else {
-	   println('')
-	}
+      if arg.contains('-') {
+         s:=arg.split('-')
+         from := math.max ( 1, math.min ( 25, s[0].u32() ) )
+         to   := math.max ( 1, math.min ( 25, s[1].u32()  ) )
+         for i in from..to+1 { days[i] = true }
+      } else {
+         match arg {
+	   '1','2','3','4','5','6','7','8','9','10',
+	   '11','12','13','14','15','16','17','18','19','20',
+           '21','22','23','24','25' { days[i32(arg.int())]=true }
+	   '2020','2021','2022','2023' { y=i32(arg.int()) }
+	   'T','t' { }
+	   else {
+	      println ( 'Unknown argument $arg' )
+	   }
+         }
       }
    }
 
    for yd in years {
       if ok(y, yd.y) {
          println ( term.bright_yellow("Year ${yd.y}") )
-	 run_day ( yd.d, d )
+         for d, r in days {
+            if d>0 && r == true {
+	       run_day ( yd.d, i32(d) )
+	    }
+	 }
+	 if days.all( it==false ) {
+	    run_day ( yd.d, 0 )
+	 }
       }
    }
 

@@ -1,5 +1,6 @@
 module day14
 
+import aoc
 import os
 import term
 import hash
@@ -9,7 +10,9 @@ const path='modules/year2023/day14/input'
 
 fn load() ![][]u8 {
    mut data:= [][]u8{}
-   mut lines := os.read_lines( path )!
+   mut p := path
+   if aoc.test_mode() { p += '_test' }
+   mut lines := os.read_lines ( p )!
    for line in lines {
       data << line.bytes()
    }

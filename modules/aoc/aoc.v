@@ -2,6 +2,13 @@ module aoc
 
 import term
 import time
+import os
+
+pub fn test_mode() bool {
+   if 't' in os.args[1..] { return true }
+   if 'T' in os.args[1..] { return true }  
+   return false
+}
 
 //pub struct Year{
 //	pub:
@@ -81,7 +88,7 @@ fn spin ( txt string, tsk fn()string ) string {
    return ans
 }
 
-pub fn(day Day) run() {
+pub fn(day Day) run ( ) {
    print ( "\e[?25l" ) // hide cursor
    println ( term.bright_green("  Day ${day.day}") )
    spin ( term.green("    Task 1: "), day.task_1 )

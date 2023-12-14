@@ -93,7 +93,7 @@ fn prepare2( d DATA ) u64 {
       }
       for t.len < plen { t << `.` }
       //println ( m )
-      if ( check ( t, d.pattern ) ) { sum+=1 }
+      if check ( t, d.pattern ) { sum+=1 }
       for i in 1..m.len+2 {
          if i==m.len+1 { done=true break}
          m[m.len-i]++
