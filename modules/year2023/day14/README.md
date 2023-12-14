@@ -103,7 +103,7 @@ After 3 cycles:
 #...O###.O
 #.OOO#...O
 ```
-This process should work if you leave it running long enough, but you're still worried about the north support beams. To make sure they'll survive for a while, you need to calculate the total load on the north support beams after 1000000000 cycles.
+This process should work if you leave it running long enough, but you're still worried about the north support beams. To make sure they'll survive for a while, you need to calculate the total load on the north support beams after `1000000000` cycles.
 
 In the above example, after `1000000000` cycles, the total load on the north support beams is `64`.
 
