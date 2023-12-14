@@ -7,7 +7,7 @@ Advent of Code solutions written in V language
         <a href="modules/year2021">2021</a> 
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
-        :star: :star: :star: :star: :star: 
+        :star: :star: :star: :star: :star:
     </summary>
     
 * [Day 1 - Sonar Sweep](modules/year2021/day01) - :star:
@@ -41,7 +41,7 @@ Advent of Code solutions written in V language
     <summary>
         <a href="modules/year2023">2023</a> 
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-        :star:
+        :star: :star: 🟊 ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
     </summary>
     
 * [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
@@ -55,4 +55,11 @@ Advent of Code solutions written in V language
 * [Day 9 - Mirage Maintenance](modules/year2023/day09) - :star:
 * [Day 10 - Pipe Maze](modules/year2023/day10) - :star:
 * [Day 11 - Cosmic Expansion](modules/year2023/day11) - :star:
+* [Day 12 - Hot Springs](modules/year2023/day12) - 🟊
+* [Day 13 - Point of Incidence](modules/year2023/day13) - :star:
 </details>
+
+Legend
+* ⭐ - both parts
+* 🟊 - one part
+* ✩ - none

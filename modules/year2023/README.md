@@ -11,3 +11,6 @@
 * [Day 8 - Haunted Wasteland](day08) - :star:
 * [Day 9 - Mirage Maintenance](day09) - :star:
 * [Day 10 - Pipe Maze](day10) - :star:
+* [Day 11 - Cosmic Expansion](day11) - :star:
+* [Day 12 - Hot Springs](day12) - 🟊
+* [Day 13 - Point of Incidence](day13) - :star:
