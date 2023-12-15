@@ -81,7 +81,7 @@ For each row, count all of the different arrangements of operational and broken 
 
 Your puzzle answer was `7922`.
 
-*The first half of this puzzle is complete! It provides one gold star:* :star:
+**The first half of this puzzle is complete! It provides one gold star:** :star:
 
 # --- Part Two ---
 As you look out at the field of springs, you feel like there are way more springs than the condition records list. When you examine the records, you discover that they were actually folded up this whole time!
