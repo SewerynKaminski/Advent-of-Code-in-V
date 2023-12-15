@@ -41,9 +41,9 @@ In the second race, you could hold the button for at least 4 milliseconds and at
 
 In the third race, you could hold the button for at least 11 milliseconds and no more than 19 milliseconds and still beat the record, a total of 9 ways you could win.
 
-To see how much margin of error you have, determine the number of ways you can beat the record in each race; in this example, if you multiply these values together, you get 288 (4 * 8 * 9).
+To see how much margin of error you have, determine the number of ways you can beat the record in each race; in this example, if you multiply these values together, you get `288` (`4 * 8 * 9`).
 
-Determine the number of ways you could beat the record in each race. What do you get if you multiply these numbers together?
+Determine the number of ways you could beat the record in each race. **What do you get if you multiply these numbers together?**
 
 Your puzzle answer was `131376`.
 
@@ -65,10 +65,10 @@ Time:      71530
 Distance:  940200
 ```
 
-Now, you have to figure out how many ways there are to win this single race. In this example, the race lasts for 71530 milliseconds and the record distance you need to beat is 940200 millimeters. You could hold the button anywhere from 14 to 71516 milliseconds and beat the record, a total of 71503 ways!
+Now, you have to figure out how many ways there are to win this single race. In this example, the race lasts for `71530` milliseconds and the record distance you need to beat is `940200` millimeters. You could hold the button anywhere from `14` to `71516` milliseconds and beat the record, a total of **`71503`** ways!
 
-How many ways can you beat the record in this one much longer race?
+**How many ways can you beat the record in this one much longer race?**
 
 Your puzzle answer was `34123437`.
 
-*Both parts of this puzzle are complete! They provide two gold stars:* :star: :star:
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
