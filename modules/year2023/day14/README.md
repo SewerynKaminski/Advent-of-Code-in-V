@@ -52,7 +52,7 @@ O..#.OO...  7
 #....###..  2
 #....#....  1
 ```
-The total load is the sum of the load caused by all of the rounded rocks. In this example, the total load is 136.
+The total load is the sum of the load caused by all of the rounded rocks. In this example, the total load is **`136`**.
 
 Tilt the platform so that the rounded rocks all roll north. Afterward, what is the total load on the north support beams?
 
@@ -105,10 +105,10 @@ After 3 cycles:
 ```
 This process should work if you leave it running long enough, but you're still worried about the north support beams. To make sure they'll survive for a while, you need to calculate the total load on the north support beams after `1000000000` cycles.
 
-In the above example, after `1000000000` cycles, the total load on the north support beams is `64`.
+In the above example, after `1000000000` cycles, the total load on the north support beams is **`64`**.
 
 Run the spin cycle for `1000000000` cycles. Afterward, what is the total load on the north support beams?
 
 Your puzzle answer was `98894`.
 
-*Both parts of this puzzle are complete! They provide two gold stars:* :star: :star:
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
