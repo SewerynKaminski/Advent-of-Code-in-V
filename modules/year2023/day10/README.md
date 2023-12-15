@@ -10,14 +10,14 @@ Scanning the area, you discover that the entire field you're standing on is dens
 
 The pipes are arranged in a two-dimensional grid of tiles:
 
-* | is a vertical pipe connecting north and south.
-* - is a horizontal pipe connecting east and west.
-* L is a 90-degree bend connecting north and east.
-* J is a 90-degree bend connecting north and west.
-* 7 is a 90-degree bend connecting south and west.
-* F is a 90-degree bend connecting south and east.
-* . is ground; there is no pipe in this tile.
-* S is the starting position of the animal; there is a pipe on this tile, but your sketch doesn't show what shape the pipe has.
+* `|` is a **vertical pipe** connecting north and south.
+* `-` is a **horizontal pipe** connecting east and west.
+* `L` is a **90-degree bend** connecting north and east.
+* `J` is a **90-degree bend** connecting north and west.
+* `7` is a **90-degree bend** connecting south and west.
+* `F` is a **90-degree bend** connecting south and east.
+* `.` is **ground**; there is no pipe in this tile.
+* `S` is the **starting position** of the animal; there is a pipe on this tile, but your sketch doesn't show what shape the pipe has.
 
 Based on the acoustics of the animal's scurrying, you're confident the pipe that contains the animal is one large, continuous loop.
 
@@ -119,7 +119,7 @@ Here are the distances for each tile on that loop:
 23...
 ```
 
-Find the single giant loop starting at S. How many steps along the loop does it take to get from the starting position to the point farthest from the starting position?
+Find the single giant loop starting at `S`. **How many steps along the loop does it take to get from the starting position to the point farthest from the starting position?**
 
 Your puzzle answer was `6812`.
 
@@ -233,10 +233,10 @@ L.L7LFJ|||||FJL7||LJ
 L7JLJL-JLJLJL--JLJ.L
 ```
 
-In this last example, 10 tiles are enclosed by the loop.
+In this last example, **`10`** tiles are enclosed by the loop.
 
 Figure out whether you have time to search for the nest by calculating the area within the loop. How many tiles are enclosed by the loop?
 
 Your puzzle answer was `527`.
 
-*Both parts of this puzzle are complete! They provide two gold stars:* :star: :star:
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
