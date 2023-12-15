@@ -52,9 +52,9 @@ So, the first step is to put the hands in order of strength:
 * KK677 and KTJJT are both two pair. Their first cards both have the same label, but the second card of KK677 is stronger (K vs T), so KTJJT gets rank 2 and KK677 gets rank 3.
 * T55J5 and QQQJA are both three of a kind. QQQJA has a stronger first card, so it gets rank 5 and T55J5 gets rank 4.
 
-Now, you can determine the total winnings of this set of hands by adding up the result of multiplying each hand's bid with its rank (765 * 1 + 220 * 2 + 28 * 3 + 684 * 4 + 483 * 5). So the total winnings in this example are 6440.
+Now, you can determine the total winnings of this set of hands by adding up the result of multiplying each hand's bid with its rank (765 * 1 + 220 * 2 + 28 * 3 + 684 * 4 + 483 * 5). So the total winnings in this example are **`6440`**.
 
-Find the rank of every hand in your set. What are the total winnings?
+Find the rank of every hand in your set. **What are the total winnings?**
 
 Your puzzle answer was `251927063`.
 
@@ -62,7 +62,7 @@ Your puzzle answer was `251927063`.
 
 To make things a little more interesting, the Elf introduces one additional rule. Now, J cards are jokers - wildcards that can act like whatever card would make the hand the strongest type possible.
 
-To balance this, J cards are now the weakest individual cards, weaker even than 2. The other cards stay in the same order: A, K, Q, T, 9, 8, 7, 6, 5, 4, 3, 2, J.
+To balance this, J cards are now the weakest individual cards, weaker even than 2. The other cards stay in the same order: `A, K, Q, T, 9, 8, 7, 6, 5, 4, 3, 2, J`.
 
 J cards can pretend to be whatever card is best for the purpose of determining hand type; for example, QJJQ2 is now considered four of a kind. However, for the purpose of breaking ties between two hands of the same type, J is always treated as J, not the card it's pretending to be: JKKK2 is weaker than QQQQ2 because J is weaker than Q.
 
@@ -76,14 +76,14 @@ KTJJT 220
 QQQJA 483
 ```
 
-* 32T3K is still the only one pair; it doesn't contain any jokers, so its strength doesn't increase.
-* KK677 is now the only two pair, making it the second-weakest hand.
-* T55J5, KTJJT, and QQQJA are now all four of a kind! T55J5 gets rank 3, QQQJA gets rank 4, and KTJJT gets rank 5.
+* `32T3K` is still the only one pair; it doesn't contain any jokers, so its strength doesn't increase.
+* `KK677` is now the only two pair, making it the second-weakest hand.
+* `T55J5`, `KTJJT`, and `QQQJA` are now all four of a kind! `T55J5` gets rank `3`, `QQQJA` gets rank `4`, and `KTJJT` gets rank `5`.
 
-With the new joker rule, the total winnings in this example are 5905.
+With the new joker rule, the total winnings in this example are **`5905`**.
 
-Using the new joker rule, find the rank of every hand in your set. What are the new total winnings?
+Using the new joker rule, find the rank of every hand in your set. **What are the new total winnings?**
 
 Your puzzle answer was `255632664`.
 
-*Both parts of this puzzle are complete! They provide two gold stars:* :star: :star:
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
