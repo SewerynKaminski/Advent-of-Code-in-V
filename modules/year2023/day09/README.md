@@ -18,7 +18,7 @@ You pull out your handy Oasis And Sand Instability Sensor and analyze your surro
 
 To best protect the oasis, your environmental report should include a prediction of the next value in each history. To do this, start by making a new sequence from the difference at each step of your history. If that sequence is not all zeroes, repeat this process, using the sequence you just generated as the input sequence. Once all of the values in your latest sequence are zeroes, you can extrapolate what the next value of the original history should be.
 
-In the above dataset, the first history is 0 3 6 9 12 15. Because the values increase by 3 each step, the first sequence of differences that you generate will be 3 3 3 3 3. Note that this sequence has one fewer value than the input sequence because at each step it considers two numbers from the input. Since these values aren't all zero, repeat the process: the values differ by 0 at each step, so the next sequence is 0 0 0 0. This means you have enough information to extrapolate the history! Visually, these sequences can be arranged like this:
+In the above dataset, the first history is `0 3 6 9 12 15`. Because the values increase by 3 each step, the first sequence of differences that you generate will be `3 3 3 3 3`. Note that this sequence has one fewer value than the input sequence because at each step it considers two numbers from the input. Since these values aren't all zero, repeat the process: the values differ by 0 at each step, so the next sequence is `0 0 0 0`. This means you have enough information to extrapolate the history! Visually, these sequences can be arranged like this:
 
 ```
 0   3   6   9  12  15
@@ -34,7 +34,7 @@ To extrapolate, start by adding a new zero to the end of your list of zeroes; be
     0   0   0   0   0
 ```
 
-You can then start filling in placeholders from the bottom up. A needs to be the result of increasing 3 (the value to its left) by 0 (the value below it); this means A must be 3:
+You can then start filling in placeholders from the bottom up. A needs to be the result of increasing `3` (the value to its left) by `0` (the value below it); this means A must be `3`:
 
 ```
 0   3   6   9  12  15   B
@@ -42,7 +42,7 @@ You can then start filling in placeholders from the bottom up. A needs to be the
     0   0   0   0   0
 ```
 
-Finally, you can fill in B, which needs to be the result of increasing 15 (the value to its left) by 3 (the value below it), or 18:
+Finally, you can fill in B, which needs to be the result of increasing `15` (the value to its left) by `3` (the value below it), or `18`:
 
 ```
 0   3   6   9  12  15  18
@@ -50,7 +50,7 @@ Finally, you can fill in B, which needs to be the result of increasing 15 (the v
     0   0   0   0   0
 ```
 
-So, the next value of the first history is 18.
+So, the next value of the first history is `18`.
 
 Finding all-zero differences for the second history requires an additional sequence:
 
@@ -70,7 +70,7 @@ Then, following the same process as before, work out the next value in each sequ
       0   0   0   0
 ```
 
-So, the next value of the second history is 28.
+So, the next value of the second history is `28`.
 
 The third history requires even more sequences, but its next value can be found the same way:
 
@@ -82,9 +82,9 @@ The third history requires even more sequences, but its next value can be found 
          0   0   0
 ```
 
-So, the next value of the third history is 68.
+So, the next value of the third history is `68`.
 
-If you find the next value for each history in this example and add them together, you get 114.
+If you find the next value for each history in this example and add them together, you get **`114`**.
 
 Analyze your OASIS report and extrapolate the next value for each history. What is the sum of these extrapolated values?
 
@@ -108,10 +108,10 @@ In particular, here is what the third example history looks like when extrapolat
 
 Adding the new values on the left side of each sequence from bottom to top eventually reveals the new left-most history value: 5.
 
-Doing this for the remaining example data above results in previous values of -3 for the first history and 0 for the second history. Adding all three new values together produces 2.
+Doing this for the remaining example data above results in previous values of -3 for the first history and 0 for the second history. Adding all three new values together produces **`2`**.
 
-Analyze your OASIS report again, this time extrapolating the previous value for each history. What is the sum of these extrapolated values?
+Analyze your OASIS report again, this time extrapolating the previous value for each history. **What is the sum of these extrapolated values?**
 
 Your puzzle answer was `1108`.
 
-*Both parts of this puzzle are complete! They provide two gold stars:* :star: :star:
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
