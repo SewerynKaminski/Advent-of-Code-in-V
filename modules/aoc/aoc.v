@@ -10,20 +10,35 @@ pub fn test_mode() bool {
    return false
 }
 
-//pub struct Year{
-//	pub:
-//	y u16
-//	days Days
-//}
+pub fn read_lines( path string ) ![]string {
+   if current_task(0)==2 {
+      if test_mode() {
+         if os.exists ( path+'_test2' ) {
+            return os.read_lines ( path+'_test2' )!
+         }
+      }
+   }
+   if test_mode() {
+      return os.read_lines ( path+'_test' )!
+   }
+   return os.read_lines ( path )!
+}
 
-//pub fn(y Year) year() u16 {
-//	return y.y
-//}
+@[unsafe]
+fn current_task_unsafe ( a u8 ) u8 {
+   mut static current_task_:= u8(0)
+   if a > 0 {
+      current_task_ = a
+   }
+   return current_task_
+}
 
-//pub fn(y Year) run() {
-//  println ( "AoC ${y.year()}" )  
-//  y.days.run()
-//}
+pub fn current_task ( a u8 ) u8 {
+   unsafe {
+      return current_task_unsafe(a)
+   }
+}
+
 
 pub const days=Days{}
 
@@ -91,7 +106,9 @@ fn spin ( txt string, tsk fn()string ) string {
 pub fn(day Day) run ( ) {
    print ( "\e[?25l" ) // hide cursor
    println ( term.bright_green("  Day ${day.day}") )
+   unsafe{current_task(1)}
    spin ( term.green("    Task 1: "), day.task_1 )
+   unsafe{current_task(2)}
    spin ( term.green("    Task 2: "), day.task_2 )
    print ( "\e[?25h" ) // show cursor
 }
