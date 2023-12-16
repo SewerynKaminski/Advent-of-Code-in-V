@@ -1,14 +1,13 @@
 module day03
 
-import os
+import aoc
 import term
 import arrays
 
 const path = 'modules/year2023/day03/input'
-	     //'modules/year2023/day03/input_test'
 
 fn load() ![]string {
-	mut data := os.read_lines ( path )!
+	mut data := aoc.read_lines ( path )!
 	// remove amty line at the end
 	for data.last()=='' {
 	    data.pop()

@@ -1,11 +1,9 @@
 module day08
 
-import os
+import aoc
 import term 
 
 const path='modules/year2023/day08/input'
-           //'modules/year2023/day08/input_test'
-           //'modules/year2023/day08/input_test2'
 
 struct Ss {
 mut:
@@ -21,7 +19,7 @@ mut:
 fn load() !DATA{
    mut data := DATA{}
 
-   lines := os.read_lines( path )!
+   lines := aoc.read_lines( path )!
    data.dir = lines[0].bytes().map( u8(it==`R`) )
    for line in lines[2..] {
          s := line.fields()

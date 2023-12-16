@@ -1,12 +1,9 @@
 module day02
 
-import os
-import arrays
+import aoc
 import term
 
-const path = 
-	'modules/year2023/day02/input'
-	//'modules/year2023/day02/input_test'
+const path = 'modules/year2023/day02/input'
 
 struct RGB{
 mut:
@@ -20,7 +17,7 @@ fn (rgb RGB) power() i64 {
 }
 
 fn load() ![][]RGB{
-   lines := os.read_lines( path )!
+   lines := aoc.read_lines( path )!
    mut games := [][]RGB{}
    for line in lines {
       games << []RGB{}

@@ -1,10 +1,9 @@
 module day04
 
-import os
+import aoc
 import term
 
 const path = 'modules/year2023/day04/input'
-             //'modules/year2023/day04/input_test'
 
 struct Ss {
 mut:
@@ -31,7 +30,7 @@ fn insert_sorted ( mut a []int, w int ) {
 
 fn load() ![]Ss {
    mut data := []Ss {}
-   lines := os.read_lines( path )!
+   lines := aoc.read_lines( path )!
    for line in lines {
       mut card:=Ss{}
       s := line.split ( ':' )

@@ -1,6 +1,6 @@
 module day05
 
-import os
+import aoc
 import term
 import arrays
 import math
@@ -146,7 +146,7 @@ fn readmap ( mut lines []string ) []MAP {
 
 fn load ( ) !DATA {
    mut data := DATA {}
-   mut lines := os.read_lines( path )!
+   mut lines := aoc.read_lines( path )!
    lines.reverse_in_place()
    line := lines.pop()
    s := line.split ( ': ' )

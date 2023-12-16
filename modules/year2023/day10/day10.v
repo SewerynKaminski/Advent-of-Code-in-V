@@ -1,11 +1,9 @@
 module day10
 
-import os
+import aoc
 import term
 
 const path='modules/year2023/day10/input'
-           //'modules/year2023/day10/input_test'
-           //'modules/year2023/day10/input_test2'
 
 struct Point{
 mut:
@@ -14,7 +12,7 @@ mut:
 }
 
 fn load() ![]string{
-   mut data := os.read_lines( path )!
+   mut data := aoc.read_lines( path )!
    len := data[0].len+2
    data = data.map( "."+it+"." )
    data.insert( 0, ".".repeat(len) )

@@ -1,6 +1,6 @@
 module day07
 
-import os
+import aoc
 import term
 import math.stats
 
@@ -14,7 +14,7 @@ mut:
 
 fn load() ![]Ss {
    mut data := []Ss {}
-   lines:= os.read_lines( path )!
+   lines:= aoc.read_lines( path )!
    for line in lines {
       s := line.split( ' ' )
       mut b := []u8{}

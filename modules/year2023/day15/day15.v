@@ -1,15 +1,14 @@
 module day15
 
-//import aoc
-import os
+import aoc
+//import os
 import term
 
 const path='modules/year2023/day15/input'
 
 fn load() ![]string {
    mut p := path
-   //if aoc.test_mode() { p += '_test' }
-   data := os.read_lines ( p )!
+   data := aoc.read_lines ( p )!
    return data[0].split(',')
 }
 

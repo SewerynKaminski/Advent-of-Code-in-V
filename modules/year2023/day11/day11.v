@@ -1,11 +1,10 @@
 module day11
 
-import os
+import aoc
 import term
 import math
 
 const path='modules/year2023/day11/input'
-           //'modules/year2023/day11/input_test'
 
 struct Point{
 mut:
@@ -19,7 +18,7 @@ fn(p Point)-(a Point) Point{
 
 fn load() ![]Point{
    mut points:= []Point{}
-   mut data := os.read_lines( path )!
+   mut data := aoc.read_lines( path )!
    for y,line in data {
       for x,c in line {
          if c==`#` {

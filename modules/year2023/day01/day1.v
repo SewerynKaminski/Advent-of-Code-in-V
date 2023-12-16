@@ -1,13 +1,11 @@
 module day01
 
-import os
+import aoc
 import term
 import arrays
 import math 
 
 const path = 'modules/year2023/day01/input'
-           //'modules/year2023/day01/input_test'
-           //'modules/year2023/day01/input_test2'
 
 fn is_digit ( c u8 ) bool { return c>=48 && c<=48+9 }
 
@@ -21,7 +19,7 @@ fn last_digit ( line []u8 ) ?u8 {
 
 fn load() ![][]u8 {
     mut ret := [][]u8{}
-    lines := os.read_lines( path )!
+    lines:= aoc.read_lines ( path )!
     for line in lines {
 	ret << line.bytes()
     }
@@ -31,8 +29,6 @@ fn load() ![][]u8 {
 pub fn task1() string {
     mut ans := i64(0)
 
-    //aoc::test_enable();
-    //auto& file = aoc::is_test_enabled() ? test_input() : puzzle_input;
     lines := load() or { return term.bright_red("[Error]Load:"+err.str()) }
     for line in lines {
 	mut a := first_digit ( line ) or {48} - 48

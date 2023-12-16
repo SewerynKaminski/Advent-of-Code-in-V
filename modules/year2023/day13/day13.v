@@ -1,10 +1,9 @@
 module day13
 
-import os
+import aoc
 import term
 
 const path='modules/year2023/day13/input'
-           //'modules/year2023/day13/input_test'
 
 struct DATA{
 mut:
@@ -13,7 +12,7 @@ mut:
 
 fn load() ![]DATA {
    mut pats:= []DATA{}
-   mut data := os.read_lines( path )!
+   mut data := aoc.read_lines( path )!
    mut p:= DATA{}
    for line in data {
       if line.len > 0 {

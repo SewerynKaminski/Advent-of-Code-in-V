@@ -1,6 +1,6 @@
 module day09
 
-import os
+import aoc
 import term
 
 const path='modules/year2023/day09/input'
@@ -14,7 +14,7 @@ mut:
 fn load() !DATA{
    mut data := DATA{}
 
-   lines := os.read_lines( path )!
+   lines := aoc.read_lines( path )!
    for line in lines {	 
          vals := line.fields().map( it.i64() )
          data.reports << vals

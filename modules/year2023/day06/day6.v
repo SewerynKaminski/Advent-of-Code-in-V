@@ -1,6 +1,6 @@
 module day06
 
-import os
+import aoc
 import term
 import math
 
@@ -15,7 +15,7 @@ mut:
 
 fn load ( ) ![]DATA {
    mut data := []DATA {}
-   lines:= os.read_lines( path )!
+   lines:= aoc.read_lines( path )!
    mut s := lines[0].split ( ':' )
    times :=s[1].split( ' ' ).filter ( it.len>0 )
    timesi := times.map( it.i64() )
