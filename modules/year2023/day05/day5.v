@@ -130,16 +130,15 @@ fn (d DATA) humidity_to_location ( v i64 ) i64 {
 fn readmap ( mut lines []string ) []MAP {
    mut m := []MAP{}
    lines.pop()
-   mut line := lines.pop()
-   for line.len > 0 {
+   for lines.len > 0 {
+      mut line:= lines.pop()
+      if line.len == 0 { break }
       v := line.split ( ' ' )
       m << MAP {
                  dr : Range { s: v[0].i64(), e: v[0].i64()+v[2].i64()},
                  sr : Range { s: v[1].i64(), e: v[1].i64()+v[2].i64()},
                  d  : v[0].i64()-v[1].i64()
                }      
-      line = lines.pop()
-      if lines.len==1{break}
    }
    return m
 }
