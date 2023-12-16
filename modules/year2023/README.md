@@ -14,3 +14,6 @@
 * [Day 11 - Cosmic Expansion](day11) - :star:
 * [Day 12 - Hot Springs](day12) - 🟊
 * [Day 13 - Point of Incidence](day13) - :star:
+* [Day 14 - Parabolic Reflector Dish](modules/year2023/day14) - :star:
+* [Day 15 - Lens Library](modules/year2023/day15) - :star:
+* [Day 16 - The Floor Will Be Lava](modules/year2023/day16) - :star:
