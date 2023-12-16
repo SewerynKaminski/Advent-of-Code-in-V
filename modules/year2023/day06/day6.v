@@ -68,7 +68,7 @@ pub fn task2() string {
    mut s:=""
    $if tinyc {
     s = ans.str().replace('.','')
-    s = s[0..s.last_index('e+')or{s.len}]
+    s = s[0..s.index_last('e+')or{s.len}]
    } $else {
       s = i64(ans).str()
    }
