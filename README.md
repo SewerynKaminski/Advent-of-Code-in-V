@@ -60,6 +60,9 @@ Advent of Code solutions written in V language
 * [Day 14 - Parabolic Reflector Dish](modules/year2023/day14) - :star:
 * [Day 15 - Lens Library](modules/year2023/day15) - :star:
 * [Day 16 - The Floor Will Be Lava](modules/year2023/day16) - :star:
+* [Day 17 - Clumsy Crucible](modules/year2023/day17)
+* [Day 18 - Lavaduct Lagoon](modules/year2023/day18) - 🟊
+* [Day 19 - Aplenty](modules/year2023/day19) - 🟊
 </details>
 
 Legend
