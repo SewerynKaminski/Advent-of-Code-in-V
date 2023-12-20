@@ -15,12 +15,12 @@ Then, each part is sent through a series of workflows that will ultimately accep
 
 Consider the workflow ex{x>10:one,m<20:two,a>30:R,A}. This workflow is named ex and contains four rules. If workflow ex were considering a specific part, it would perform the following steps in order:
 
-* Rule "x>10:one": If the part's x is more than 10, send the part to the workflow named one.
-* Rule "m<20:two": Otherwise, if the part's m is less than 20, send the part to the workflow named two.
-* Rule "a>30:R": Otherwise, if the part's a is more than 30, the part is immediately rejected (R).
-* Rule "A": Otherwise, because no other rules matched the part, the part is immediately accepted (A).
+* Rule "`x>10:one`": If the part's x is more than `10`, send the part to the workflow named one.
+* Rule "`m<20:two`": Otherwise, if the part's m is less than `20`, send the part to the workflow named two.
+* Rule "`a>30:R`": Otherwise, if the part's a is more than `30`, the part is immediately rejected (`R`).
+* Rule "`A`": Otherwise, because no other rules matched the part, the part is immediately accepted (`A`).
 
-If a part is sent to another workflow, it immediately switches to the start of that workflow instead and never returns. If a part is accepted (sent to A) or rejected (sent to R), the part immediately stops any further processing.
+If a part is sent to another workflow, it immediately switches to the start of that workflow instead and never returns. If a part is accepted (sent to `A`) or rejected (sent to `R`), the part immediately stops any further processing.
 
 The system works, but it's not keeping up with the torrent of weird metal shapes. The Elves ask if you can help sort a few parts and give you the list of workflows and some part ratings (your puzzle input). For example:
 
