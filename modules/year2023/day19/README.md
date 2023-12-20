@@ -6,10 +6,10 @@ As you reach the bottom of the relentless avalanche of machine parts, you discov
 
 To start, each part is rated in each of four categories:
 
-* x: Extremely cool looking
-* m: Musical (it makes a noise when you hit it)
-* a: Aerodynamic
-* s: Shiny
+* `x`: E**x**tremely cool looking
+* `m`: **M**usical (it makes a noise when you hit it)
+* `a`: **A**erodynamic
+* `s`: **S**hiny
 
 Then, each part is sent through a series of workflows that will ultimately accept or reject the part. Each workflow has a name and contains a list of rules; each rule specifies a condition and where to send the part if the condition is true. The first rule that matches the part being considered is applied immediately, and the part moves on to the destination described by the rule. (The last rule in each workflow has no condition and always applies if reached.)
 
