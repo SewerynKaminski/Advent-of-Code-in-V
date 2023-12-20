@@ -13,12 +13,12 @@ To start, each part is rated in each of four categories:
 
 Then, each part is sent through a series of workflows that will ultimately accept or reject the part. Each workflow has a name and contains a list of rules; each rule specifies a condition and where to send the part if the condition is true. The first rule that matches the part being considered is applied immediately, and the part moves on to the destination described by the rule. (The last rule in each workflow has no condition and always applies if reached.)
 
-Consider the workflow ex{x>10:one,m<20:two,a>30:R,A}. This workflow is named ex and contains four rules. If workflow ex were considering a specific part, it would perform the following steps in order:
+Consider the workflow `ex{x>10:one,m<20:two,a>30:R,A}`. This workflow is named ex and contains four rules. If workflow ex were considering a specific part, it would perform the following steps in order:
 
 * Rule "`x>10:one`": If the part's x is more than `10`, send the part to the workflow named one.
 * Rule "`m<20:two`": Otherwise, if the part's m is less than `20`, send the part to the workflow named two.
-* Rule "`a>30:R`": Otherwise, if the part's a is more than `30`, the part is immediately rejected (`R`).
-* Rule "`A`": Otherwise, because no other rules matched the part, the part is immediately accepted (`A`).
+* Rule "`a>30:R`": Otherwise, if the part's a is more than `30`, the part is immediately **rejected** (`R`).
+* Rule "`A`": Otherwise, because no other rules matched the part, the part is immediately **accepted** (`A`).
 
 If a part is sent to another workflow, it immediately switches to the start of that workflow instead and never returns. If a part is accepted (sent to `A`) or rejected (sent to `R`), the part immediately stops any further processing.
 
@@ -52,7 +52,7 @@ The workflows are listed first, followed by a blank line, then the ratings of th
 * `{x=2461,m=1339,a=466,s=291}:` `in` -> `px` -> `qkq` -> `crn` -> `R`
 * `{x=2127,m=1623,a=2188,s=1013}:` `in` -> `px` -> `rfg` -> `A`
 
-Ultimately, three parts are accepted. Adding up the x, m, a, and s rating for each of the accepted parts gives 7540 for the part with x=787, 4623 for the part with x=2036, and 6951 for the part with x=2127. Adding all of the ratings for all of the accepted parts gives the sum total of 19114.
+Ultimately, three parts are accepted. Adding up the x, m, a, and s rating for each of the accepted parts gives `7540` for the part with `x=787`, `4623` for the part with `x=2036`, and `6951` for the part with `x=2127`. Adding all of the ratings for all of the accepted parts gives the sum total of `19114`.
 
 Sort through all of the parts you've been given; **what do you get if you add together all of the rating numbers for all of the parts that ultimately get accepted?**
 
