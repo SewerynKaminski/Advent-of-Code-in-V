@@ -41,7 +41,7 @@ Advent of Code solutions written in V language
     <summary>
         <a href="modules/year2023">2023</a> 
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-        :star: :star: :star: :star: :star: 🟊 ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+        :star: :star: :star: :star: :star: :star: 🟊 ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
     </summary>
     
 * [Day 1 - Trebuchet?!](modules/year2023/day01) - :star:
@@ -62,7 +62,7 @@ Advent of Code solutions written in V language
 * [Day 16 - The Floor Will Be Lava](modules/year2023/day16) - :star:
 * [Day 17 - Clumsy Crucible](modules/year2023/day17)
 * [Day 18 - Lavaduct Lagoon](modules/year2023/day18) - 🟊
-* [Day 19 - Aplenty](modules/year2023/day19) - 🟊
+* [Day 19 - Aplenty](modules/year2023/day19) - :star:
 </details>
 
 Legend
