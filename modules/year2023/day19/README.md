@@ -54,7 +54,7 @@ The workflows are listed first, followed by a blank line, then the ratings of th
 
 Ultimately, three parts are accepted. Adding up the x, m, a, and s rating for each of the accepted parts gives 7540 for the part with x=787, 4623 for the part with x=2036, and 6951 for the part with x=2127. Adding all of the ratings for all of the accepted parts gives the sum total of 19114.
 
-Sort through all of the parts you've been given; *what do you get if you add together all of the rating numbers for all of the parts that ultimately get accepted?*
+Sort through all of the parts you've been given; **what do you get if you add together all of the rating numbers for all of the parts that ultimately get accepted?**
 
 Your puzzle answer was `386787`.
 
@@ -68,8 +68,8 @@ Each of the four ratings (`x`, `m`, `a`, `s`) can have an integer value ranging 
 
 In the above example, there are `167409079868000` distinct combinations of ratings that will be accepted.
 
-Consider only your list of workflows; the list of part ratings that the Elves wanted you to sort is no longer relevant. *How many distinct combinations of ratings will be accepted by the Elves' workflows?*
+Consider only your list of workflows; the list of part ratings that the Elves wanted you to sort is no longer relevant. **How many distinct combinations of ratings will be accepted by the Elves' workflows?**
 
 Your puzzle answer was `131029523269531`.
 
-*Both parts of this puzzle are complete! They provide two gold stars:* :star: :star:
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:
